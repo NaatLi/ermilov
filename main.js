@@ -17,10 +17,11 @@ navLinks.addEventListener("click", (e) => {
     menuBtnIcon.setAttribute("class", "ri-menu-3-line");
 });
 
+/*
 const scrollRevealOption = {
     distance: "50px",
     origin: "bottom",
-    duration: 500,    
+    duration: 1000,    
 };
 
 ScrollReveal().reveal(".header__image img", {
@@ -33,14 +34,14 @@ ScrollReveal().reveal(".header__content .lid1", {
 });
 ScrollReveal().reveal(".header__content .lid2", {
     ...scrollRevealOption,
-    delay: 700,
+    delay: 1000,
 });
 ScrollReveal().reveal(".header__content .lid3", {
     ...scrollRevealOption,
-    delay: 900,
+    delay: 1500,
 });
 
 ScrollReveal().reveal(".header__btns", {
     ...scrollRevealOption,
-    delay: 1100,
-});
+    delay: 2000,
+});*/
