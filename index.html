@@ -1,148 +1,488 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-    rel="stylesheet"/>
-    <link rel="stylesheet" href="styles.css">
-    <title>Ермилов политтехнолог</title>
-</head>
-<body>
-    <nav>
-        <div class="nav__header">
-            <div class="nav__logo">
-                <a href="#">Ермилов<span>.</span></a>
-            </div>
-            <div class="nav__menu__btn" id="menu-btn">
-                <i class="ri-menu-3-line"></i>
-            </div>
-        </div>
-        <ul class="nav__links" id="nav-links">
-            <li><a href="#">Обо мне</a></li>
-            <li><a href="#">Проекты</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Связаться со мной</a></li>
-        </ul>
-        <img src="assets/bg.png" alt="background" class="nav__bg-1">
-    </nav>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-    <header>
-        <div class="section__container header__container">
-            <div class="header__image">
-                <img src="assets/header.jpg" alt="header">
-            </div>
-            <div class="header__content">
-                <h2 class="lid1">Ты готов! Как стать <span>депутатом</span> даже если ты об этом не думал, и занять свое место под солнцем за 5 точных шагов?
-                </h2>
-                <h2 class="lid2">От кандидата до депутата: <span>пошаговый план победы на выборах</span>! Уникальная методика, основанная на военных стратегиях, адаптированных для политических кампаний.</h2>
-                <h2 class="lid3">Я сразу показываю вам цель — победу на выборах — и помогаю построить путь из <span>здесь и сейчас</span> к этой цели.</h2>
-                
-                
-                <div class="header__btns">
-                    <button class="btn">Получить уроки бесплатно</button>
-                    <!-- <button class="btn">Получить уроки бесплатно</button> -->
-                </div>
-            </div>
-        </div>
-        <img src="assets/bg.png" alt="background" class="header__bg-1">
-    </header>
+:root{
+    --primary-color: #F25C05;
+    --primary-color-dark: #F27405;
+    --secondary-color: #330033;
+    --white: #fff;
+    --max-width: 1200px;
+}
 
-    <section class="service" id="service">
-        <div class="section__container service__container">
-            <div class="service__grid">
-                <div class="service__card">
-                    <span><i class="ri-check-double-fill"></i></span>
-                    <div>
-                        <p>
-                            Мы консультируем как бизнесу разговаривать с властью,
-                            подходить к государству, взаимодействовать с губернатором.
-                            И объясняем как вся эта система работает.
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-                        </p>
-                    </div>
-                </div>
-                <div class="service__card">
-                    <span><i class="ri-check-double-fill"></i></span>
-                    <div>
-                        <p>
-                            Вы сэкономите годы проб и ошибок.
-                            Я даю готовые стратегии, проверенные 20-летним опытом,
-                            которые сразу работают.
-                        </p>
-                    </div>
-                </div>
-                <div class="service__card">
-                    <span><i class="ri-check-double-fill"></i></span>
-                    <div>
-                        <p>
-                            Вы избежите типичных ошибок и начнете действовать эффективно с первого дня.
-                        </p>
-                    </div>
-                </div>
-                <div class="service__card">
-                    <span><i class="ri-check-double-fill"></i></span>
-                    <div>
-                        <p>
-                            Я работаю с новичками и знаю, как вывести вас на результат.
+.section__container{
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
 
-                        </p>
-                    </div>
-                </div>
-                <div class="service__card">
-                    <span><i class="ri-check-double-fill"></i></span>
-                    <div>
-                        <p>
-                            Вы получите четкие инструкции, поддержку и уверенность в своих силах.
-                            Главное — начать.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.section__header {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    text-align: center;
+}
 
-    <section class="section__container steps__container" id="steps">
-        <h2 class="section__header">Давайте двигаться по шагам...</h2>
-        <div class="steps__grid">
-            <div class="steps__card">
-                <span><i class="ri-seo-line"></i></span>
-                <h4>Шаг 1</h4>
-                <p>Проведите диагностику, выберете округ, определите болевые точки, поймите кто ваши конкуренты и договоритесь с партией
-                </p>
-            </div>
-            <div class="steps__card">
-                <span><i class="ri-user-star-line"></i></span>
-                <h4>Шаг 2</h4>
-                <p>Сформируйте свой архетип, имидж, предвыборную программу и специальные проекты
-                </p>
-            </div>
-            <div class="steps__card">
-                <span><i class="ri-pushpin-fill"></i></span>
-                <h4>Шаг 3</h4>
-                <p>Зарегистрируйтесь на выборы
-                </p>
-            </div>
-            <div class="steps__card">
-                <span><i class="ri-group-line"></i></span>
-                <h4>Шаг 4</h4>
-                <p>Сагитируйте и мобилизуйте сторонников
-                </p>
-            </div>
-            <div class="steps__card">
-                <span><i class="ri-thumb-up-fill"></i></span>
-                <h4>Шаг 5</h4>
-                <p>Защитите результаты
-                </p>
-            </div>
-        </div>
-    </section>
+.btn{
+    padding: 0.75rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+    border: 1px solid var(--primary-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--primary-color-dark);
+}
+
+img {
+    display: flex;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--secondary-color);
+}
+
+nav {
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    z-index: 9;
+}
+
+.nav__bg-1{
+    display: none;
+}
+
+.nav__header{
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+.nav__logo a{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.nav__menu__btn {
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.nav__links{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    transition: trasform 0.5s;
+    z-index: -1;
+}
+
+.nav__links.open{
+    transform: translateY(100%);
+}
+
+.nav__links a {
+    font-weight: 500;
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.nav__links a:hover {
+    color: var(--secondary-color);
+}
+
+header {
+    padding-top: 5rem;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+header::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    max-width: 30rem;
+    aspect-ratio: 1;
+    top: 50%;
+    left: -5rem;
+    transform: translateY(-50%);
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.025);
+    z-index: -1;
+}
+
+.header__container{
+    display: grid;
+    gap: 2rem; 
+}
+
+.header__image img{
+    max-width: 500px;
+    margin-inline: auto;
+}
+
+.header__content h2{
+    margin-bottom: 2.5rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+    text-align: center;
+}
+
+.header__content h2 span {
+    color: var(--primary-color);
+}
+
+.header__content h1{
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    color: var(--white);
+    line-height: 6.5rem;
+    text-align: center;
+}
+
+.header__content p {
+    margin-bottom: 2rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.header__content p span {
+    color: var(--primary-color);
+}
+
+.header__content h4{
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+    text-align: center;
+}
 
 
+.header__btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
+.header__btns .btn:nth-child(1) {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
     
-</body>
-</html>
+}
+
+.header__btns .btn:nth-child(1):hover {
+    background-color: transparent;
+    border-color: var(--white);
+}
+
+.header__bg-1 {
+    position: absolute;
+    max-width: 20rem;
+    right: -10rem;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.service {
+    background-color: var(--secondary-color);
+}
+
+.section__container .section__description{
+    max-width: 600px;
+}
+
+.service__grid{
+    margin-top: -5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.service__card{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--white);
+    transition: 0.3s;
+}
+
+.service__card:hover {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.service__card span{
+    padding: 2px 10px;
+    font-size: 1.75rem;
+    color: var(--secondary-color);
+    background-color: var(--white);
+    border-radius: 100%;
+    transition: 0.3s;
+}
+
+.service__card:hover span {
+    color: var(--primary-color);
+}
+
+.service__card h4{
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.service__card p{
+    color: var(--white);
+}
+
+.steps__grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 4rem 2rem;
+}
+
+.steps__card {
+    padding-block: 0 1.5rem;
+    padding-inline: 1.5rem;
+    color: var(--white);
+    border: 1px solid var(--white);
+    border-top-right-radius: 3rem;
+    transition: 0.3s;
+}
+.steps__card:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.steps__card span {
+    display: inline-block;
+    padding: 6px 14px;
+    font-size: 1.5rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    transform: translateY(-50%);
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.steps__card:hover span {
+    color: var(--primary-color);
+    background-color: var(--white);
+}
+
+.steps__card h4 {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.steps__card p {
+    color: var(--white);
+    line-height: 1.75rem;
+    transition: 0.3s;
+}
+
+
+@media (width > 540px) {
+    .steps__grid {
+       grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+@media (width > 768px) {
+    nav {
+        position: relative;
+        padding-inline: 1rem;
+        max-width: var(--max-width);
+        margin-inline: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .nav__bg-1{
+        display: flex;
+        max-width: 30rem;
+        position: absolute;
+        left: 50%;
+        top: -20rem;
+        transform: translateX(-50%);
+        opacity: 0.1;
+        z-index: -2;
+    }
+
+    .nav__header {
+        flex: 1;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav__logo a{
+        font-size: 1.75rem;        
+    }
+
+    .nav__logo a span {
+        color: var(--primary-color);
+    }
+
+    .nav__menu__btn {
+        display: none;
+    }
+    .nav__links{
+        position: static;
+        width: fit-content;
+        padding: 0;
+        gap: 0;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none !important;
+    }
+
+    .nav__links a{
+        display: inline-block;
+        position: relative;
+        isolation: isolate;
+        padding: 2rem 1rem;
+    }
+
+    .nav__links li:not(:nth-child(4)) a::before{
+        position: absolute;
+        content: "";
+        top: -100%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--primary-color);
+        transition: 0.3s;
+        z-index: -1;
+    }
+
+    .nav__links li a:hover::before{
+        top: 0;
+    }
+
+    .nav__links a:hover {
+        color: var(--white);
+    }
+
+    .nav__links li:nth-child(4) a {
+        display: inline-block;
+        padding: 0.5rem 1.5rem;
+        margin-left: 1rem;
+        border: 1px solid var(--white);
+        border-radius: 2rem;
+    }
+
+    .nav__links li:nth-child(4) a:hover {
+        color: var(--white);
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    header{
+        padding-top: 0;        
+    }
+
+    .header__container{
+        padding-block: 0;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        isolation: isolate;
+    }
+
+    .header__image {
+        position: relative;
+        height: 100%;
+    }
+
+    .header__image img{
+        position: absolute;
+        width: unset;
+        max-width: unset;
+        height: 100%;
+        right: 0;
+        top: 45%;
+        transform: translateY(-50%);
+        z-index: -1;
+    }
+
+    .header__content {
+        padding-block: 5rem;
+        grid-area: 1/1/2/2;
+    }
+
+    .header__content :is(h2, h1, p, h4) {
+        text-align: left;
+    }
+
+    .socials,
+    .header__btns {
+        justify-content: flex-start;
+    }
+
+
+    .service__grid{
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .steps__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+
+
+}
+
+@media (width > 1024px) {
+    .header__content {
+        padding-block: 6rem;
+    }
+}
+
