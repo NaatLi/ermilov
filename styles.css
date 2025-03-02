@@ -4,6 +4,7 @@
     --primary-color: #F25C05;
     --primary-color-dark: #F27405;
     --secondary-color: #330033;
+    --secodary-color-dark: #262626;
     --white: #fff;
     --max-width: 1200px;
 }
@@ -325,6 +326,111 @@ header::before{
     transition: 0.3s;
 }
 
+.about__container {
+    display: grid;
+    gap: 4rem;
+}
+
+.about__image img {
+    max-width: 450px;
+    margin: auto;
+}
+
+.about__content .section__header {
+
+    margin-bottom: 1rem;
+    text-align: right;
+}
+
+.about__content p {
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+.about__content p a {
+    
+    color: var(--white);
+}
+
+.about__content h3 {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+
+    color: var(--white);
+}
+
+.about__content h4 {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--white);
+    background-color: var(--secodary-color-dark);
+    border-left: 2px solid var(--primary-color-dark);
+    border-radius: 5px;
+}
+
+
+
+
+.project__header {
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .project__nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+  }
+  
+  .project__btn {
+    color: var(--white);
+    background-image: none;
+    background-color: transparent;
+  }
+  
+  .mixitup-control-active {
+    color: var(--secondary-color);
+    background-image: var(--gradient);
+  }
+  
+  .project__grid {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .project__card img {
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .project_btn {
+    margin-top: 2rem;
+  }
+
+
+  .aboutme__btns {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .aboutme__btns a {
+    padding: 3px 8px;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    background-image: var(--secodary-color-dark);
+    border-radius: 100%;
+  }
+  
+
+
 
 @media (width > 540px) {
     .steps__grid {
@@ -474,6 +580,21 @@ header::before{
     .steps__grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    .about__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 2rem;
+    }
+
+
+    .project__header {
+        flex-direction: row;
+      }
+    
+      .project__grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
 
 
 
