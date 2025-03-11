@@ -17,31 +17,56 @@ navLinks.addEventListener("click", (e) => {
     menuBtnIcon.setAttribute("class", "ri-menu-3-line");
 });
 
-/*
-const scrollRevealOption = {
-    distance: "50px",
-    origin: "bottom",
-    duration: 1000,    
+
+const modalController = ({modal, btnOpen, btnClose}) => {
+    const buttonElems = document.querySelectorAll(btnOpen);
+    const modalElem = document.querySelector(modal);
+
+
+modalElem.style.cssText = `
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+`;
+
+const closeModal = event => {
+    const target = event.target;
+
+    if (target === modalElem || target.closest(btnClose)) {
+        
+        modalElem.style.opacity = 0;
+
+        setTimeout(() => {
+            modalElem.style.visibility = 'hidden';
+        }, 300)
+    }
 };
 
-ScrollReveal().reveal(".header__image img", {
-    ...scrollRevealOption,
-    origin: "right",
-});
-ScrollReveal().reveal(".header__content .lid1", {
-    ...scrollRevealOption,
-    delay: 500,
-});
-ScrollReveal().reveal(".header__content .lid2", {
-    ...scrollRevealOption,
-    delay: 1000,
-});
-ScrollReveal().reveal(".header__content .lid3", {
-    ...scrollRevealOption,
-    delay: 1500,
+const openModal = () => {
+    modalElem.style.visibility = 'visible';
+    modalElem.style.opacity = 1;
+};
+
+buttonElems.forEach(btn => {
+    btn.addEventListener('click', openModal);
 });
 
-ScrollReveal().reveal(".header__btns", {
-    ...scrollRevealOption,
-    delay: 2000,
-});*/
+
+modalElem.addEventListener('click', closeModal);
+
+};
+
+modalController({
+    modal: '.modal',
+    btnOpen: '.btn',
+    btnClose: '.modal__close'
+});
+
+modalController({
+    modal: '.modal',
+    btnOpen: '.btn__tutorials',
+    btnClose: '.modal__close'
+});
+
+
