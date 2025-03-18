@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="css/flipdown.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/flipdown.js"></script>
+
     <title>Ермилов политтехнолог</title>
 </head>
 
@@ -251,6 +256,34 @@
           </div>
         </div>
       </section>
+
+
+      <div class="container">
+        <div class="timer">
+            <h1>Всего за 2450 руб.</h1>
+            <div id="flipdown" class="flipdown"></div>
+            <button class="btn">ОПЛАТИТЬ</button>
+
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                let timer_ = 1744243200 //unix timestamp
+                let flipdown = new FlipDown(timer_)
+                    .start()
+                    .ifEnded(() => {
+                        document.querySelector(".flipdown").innerHTML = `<h2>Акция закончилась</h2>`;
+                    })
+            })
+        </script>
+        
+        <div class="image">
+            <img src="sale2.jpg" alt="sale">
+        </div>
+        
+    </div>
+
+
+
 
 
 

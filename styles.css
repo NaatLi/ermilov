@@ -483,6 +483,131 @@ header {
   .modal__close:focus-visible {
     outline-color: greenyellow;
   }
+
+
+
+  .container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 7%;
+    background: #330033;
+    min-height: 100vh;
+    gap: 45px;
+    padding-bottom: 80px;
+
+}
+
+.container .content {
+    flex: 1 1 400px;
+}
+
+.container .image {
+    flex: 1 1 400px;
+}
+
+.container .image img{
+    width: 100%;
+}
+
+.container .content .title{
+    font-size: 45px;
+    text-transform: uppercase;
+    color: rgb(222, 99, 28);
+}
+
+.container .content p{    
+    color: #fff;
+    padding: 5px 0;
+}
+
+.container .content .count-down{
+    display: flex;
+    gap: 15px;
+    padding: 10px 0;    
+}
+
+.container .content .count-down .box{
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #3333;
+    text-align: center;
+    flex: 1 1 20px;    
+}
+
+
+.container .content .count-down .box h3{
+    font-size: 50px;
+    color: #333;    
+}
+
+.container .content .count-down .box span{
+    font-size: 20px;
+    color: #2980b9;    
+}
+
+.container .timer .btn{
+    text-transform: uppercase;
+    margin-top: 4rem;
+    padding: 1rem 3rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: #F25C05;
+    border-radius: 0.75rem;
+    border: 1px solid #F25C05;
+    transition: 0.3s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .timer .btn:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+
+
+@media (max-width:500px){
+
+    .container {
+        padding: 20px;
+    }
+
+    .container .content{
+        text-align: center;
+    }
+
+    .container .content .title {
+        font-size: 35px;
+    }
+
+    .container .content p{
+        font-size: 14px;
+    }
+
+    .container .content p{
+        font-size: 14px;
+    }
+
+    .container .content .count-down {
+        gap: 5px;
+    }
+
+    .container .content .count-down .box .h3{
+        font-size: 30px;  
+    }
+    .container .content .count-down .box span{
+        font-size: 15px;   
+    }
+
+
+
+}
+
   
 
 
