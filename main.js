@@ -57,16 +57,18 @@ modalElem.addEventListener('click', closeModal);
 
 };
 
-modalController({
-    modal: '.modal',
-    btnOpen: '.btn',
-    btnClose: '.modal__close'
-});
 
 modalController({
     modal: '.modal',
     btnOpen: '.btn__tutorials',
     btnClose: '.modal__close'
 });
+
+modalController({
+    modal: '.modal1',
+    btnOpen: '.btn1',
+    btnClose: '.modal__close'
+});
+
 
 
